@@ -1,11 +1,11 @@
-import { useState } from "react";
-import { ResizeMode, Video } from "expo-av";
-import { View, Text, TouchableOpacity, Image } from "react-native";
+import { useState } from "react"
+import { ResizeMode, Video } from "expo-av"
+import { View, Text, TouchableOpacity, Image } from "react-native"
 
-import { icons } from "../constants";
+import { icons } from "../constants"
 
 const VideoCard = ({ title, creator, avatar, thumbnail, video }) => {
-  const [play, setPlay] = useState(false);
+  const [play, setPlay] = useState(false)
 
   return (
     <View className="flex flex-col items-center px-4 mb-14">
@@ -49,7 +49,7 @@ const VideoCard = ({ title, creator, avatar, thumbnail, video }) => {
           shouldPlay
           onPlaybackStatusUpdate={(status) => {
             if (status.didJustFinish) {
-              setPlay(false);
+              setPlay(false)
             }
           }}
         />
@@ -73,7 +73,7 @@ const VideoCard = ({ title, creator, avatar, thumbnail, video }) => {
         </TouchableOpacity>
       )}
     </View>
-  );
-};
+  )
+}
 
-export default VideoCard;
+export default VideoCard
